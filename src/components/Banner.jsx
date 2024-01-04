@@ -68,11 +68,11 @@ export const Banner = () => {
 
   return (
     <div className="w-full h-bannerHeight overflow-hidden rounded-3xl flex items-center relative mb-8">
-      <div className="w-2/5 flex flex-col gap-10 ml-10 z-10">
+      <div className=" flex flex-col gap-10 ml-10 z-10">
         <h1 className="font-black text-8xl bg-clip-text bg-gradTextContainerBolinhas text-transparent text-nowrap">
           Site de Sites
         </h1>
-        <p className="text-xl text-white">
+        <p className="text-xl w-2/5 text-white">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ab
           quis dolores accusamus maxime debitis, unde numquam quod omnis. Porro
           excepturi distinctio iste neque et minima id itaque ipsa voluptate?

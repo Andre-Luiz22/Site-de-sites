@@ -14,7 +14,7 @@ export const Carrossel = ({ objConfig, cards }) => {
       <div>
         <Swiper
           modules={[Autoplay]}
-          slidesPerView={6}
+          slidesPerView={5.5}
           centeredSlides
           loop
           autoplay={{
