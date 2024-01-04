@@ -10,18 +10,22 @@ export default {
         gradContainerBolinhas:
           "linear-gradient(145deg, rgba(191,11,201,1) 0%, rgba(101,111,226,0.9626225490196079) 49%, rgba(0,255,130,1) 100%);",
 
-        gradTextContainerBolinhas: "linear-gradient(92deg, #2FA8FF 6.28%, rgba(225, 103, 255, 0.33) 95%)",
+        gradTextContainerBolinhas:
+          "linear-gradient(92deg, #FFF 6.14%, rgba(225, 103, 255, 0.67) 99.46%);",
       },
       fontFamily: {
         custom: ["poppins", "sans-serif"],
       },
       colors: {
+        bgPage: "#1e1e1e",
         pinkLogo: "#E57FFF",
+        cardBg: "#6663ff",
+        cardText: "#dee6f0",
         bolinhas: {
           verde: "rgba(0,255,130,1)",
           roxo: "rgba(101,111,226,0.9626225490196079)",
-          roxo2: "#7B50D4"
-        }
+          roxo2: "#7B50D4",
+        },
       },
       height: {
         bannerHeight: "35rem",

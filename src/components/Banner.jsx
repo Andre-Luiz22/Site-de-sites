@@ -9,6 +9,7 @@ export const Banner = () => {
   const bolaPreta1 = useRef(null);
   const bolaPreta2 = useRef(null);
   const bolaPreta3 = useRef(null);
+  const bolaPreta4 = useRef(null);
   const bolaVerde1 = useRef(null);
   const bolaVerde2 = useRef(null);
   const divContainer = useRef(null);
@@ -20,9 +21,11 @@ export const Banner = () => {
     const bolaPreta1Obj = bolaPreta1.current;
     const bolaPreta2Obj = bolaPreta2.current;
     const bolaPreta3Obj = bolaPreta3.current;
+    const bolaPreta4Obj = bolaPreta4.current;
     const bolaVerde1Obj = bolaVerde1.current;
     const bolaVerde2Obj = bolaVerde2.current;
     const divContainerObj = divContainer.current.getBoundingClientRect();
+
 
     const BolaRoxaClass = new BolaMetodos(bolaRoxaObj, divContainerObj);
     const BolaRoxa2Class = new BolaMetodos(bolaRoxa2Obj, divContainerObj);
@@ -30,6 +33,7 @@ export const Banner = () => {
     const BolaPreta1Class = new BolaMetodos(bolaPreta1Obj, divContainerObj);
     const BolaPreta2Class = new BolaMetodos(bolaPreta2Obj, divContainerObj);
     const BolaPreta3Class = new BolaMetodos(bolaPreta3Obj, divContainerObj);
+    const BolaPreta4Class = new BolaMetodos(bolaPreta4Obj, divContainerObj);
     const BolaVerde1Class = new BolaMetodos(bolaVerde1Obj, divContainerObj);
     const BolaVerde2Class = new BolaMetodos(bolaVerde2Obj, divContainerObj);
 
@@ -44,6 +48,9 @@ export const Banner = () => {
     });
     gsap.to(bolaPreta3Obj, {
       onStart: BolaPreta3Class.goTo(),
+    });
+    gsap.to(bolaPreta4Obj, {
+      onStart: BolaPreta4Class.goTo(),
     });
     gsap.to(bolaVerde1Obj, {
       onStart: BolaVerde1Class.goTo(),
@@ -60,9 +67,9 @@ export const Banner = () => {
   }, []);
 
   return (
-    <div className="w-full h-bannerHeight overflow-hidden rounded-3xl flex items-center relative ">
+    <div className="w-full h-bannerHeight overflow-hidden rounded-3xl flex items-center relative mb-8">
       <div className="w-2/5 flex flex-col gap-10 ml-10 z-10">
-        <h1 className="font-black text-8xl bg-clip-text bg-gradTextContainerBolinhas text-transparent">
+        <h1 className="font-black text-8xl bg-clip-text bg-gradTextContainerBolinhas text-transparent text-nowrap">
           Site de Sites
         </h1>
         <p className="text-xl text-white">
@@ -73,7 +80,7 @@ export const Banner = () => {
       </div>
       <div
         ref={divContainer}
-        className="absolute  bg-gradContainerBolinhas blur -inset-4"
+        className="absolute  bg-gradContainerBolinhas blur-3xl -inset-8"
       >
         <div
           ref={bolaRoxa}
@@ -85,7 +92,7 @@ export const Banner = () => {
         ></div>
         <div
           ref={bolaPreta2}
-          className=" rounded-full h-96 w-96 bg-black opacity-30 blur-2xl absolute top-0 left-0"
+          className=" rounded-full h-96 w-96 bg-black opacity-30 blur-xl absolute top-0 left-0"
         ></div>
         <div
           ref={bolaPreta3}
@@ -108,6 +115,10 @@ export const Banner = () => {
         <div
           ref={bolaRoxa3}
           className="rounded-full h-96 w-96 blur-3xl bg-bolinhas-roxo2 absolute top-0 left-0"
+        ></div>
+        <div
+          ref={bolaPreta4}
+          className=" rounded-full h-96 w-96 bg-black opacity-30 blur absolute top-0 left-0"
         ></div>
       </div>
     </div>

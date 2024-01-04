@@ -31,8 +31,8 @@ export class BolaMetodos {
     const numerosAleatorios = this.aleatorizaTudo();
     const { x, y, time } = numerosAleatorios;
     gsap.to(this.bola, {
-      x: (x - this.valoresBola.width / 2),
-      y: y - this.valoresBola.height /2,
+      x: x - this.valoresBola.width / 2,
+      y: y - this.valoresBola.height / 2,
       duration: time,
       onComplete: () => {
         this.goTo();
@@ -70,7 +70,7 @@ export class BolaMetodos {
 
   frente() {
     gsap.to(this.bola, {
-      x: (this.container.right - this.valoresBola.width /2),
+      x: this.container.right - this.valoresBola.width / 2,
       duration: 20,
       onComplete: () => this.tras(),
     });
@@ -78,7 +78,7 @@ export class BolaMetodos {
 
   tras() {
     gsap.to(this.bola, {
-      x: (this.container.left),
+      x: this.container.left,
       duration: 20,
       onComplete: () => this.frente(),
     });
